@@ -1,0 +1,49 @@
+# 用户背景与技术栈规则
+
+## 用户背景
+- 全栈开发者，主要技术栈：PHP + 微信小程序
+- 有 Ubuntu 服务器维护经验
+- 有网络搭建与维护经验
+- 当前目标：求职 Go 后端开发岗位
+- 目标技术栈：Go + Gin + Gorm + PostgreSQL + Redis
+
+## 沟通规则
+
+### 解释 Go 概念时的优先级
+1. **优先使用 PHP/Laravel 类比** - 将 Go 概念映射到 PHP 的对应概念
+2. **PHP 无法类比时，使用 C# 概念**
+3. **避免使用前端/JavaScript 概念**（用户不熟悉）
+
+### PHP → Go 的常见映射参考
+
+| PHP 概念 | Go 概念 | 说明 |
+|---------|--------|------|
+| 关联数组 `[]` | map | 键值对，但 Go 的 map 遍历无序 |
+| 索引数组 `[]` | slice | 有序可变长度数组 |
+| 固定长度数组 | array | Go 的 `[n]type` |
+| `array_push()` | `append()` | 追加元素 |
+| `count()` | `len()` | 获取长度 |
+| `class` | `struct` + `method` | Go 没有 class，用结构体+方法 |
+| `public/private` | 首字母大小写 | 大写导出(公有)，小写包内私有 |
+| `try-catch` | `error` 返回值 | Go 显式返回 error，不用异常 |
+| `composer` | `go mod` | 依赖管理 |
+| `require/include` | `import` | 导入包 |
+| `Laravel` | `Gin` | Web 框架 |
+| `Eloquent` | `Gorm` | ORM 框架 |
+| `php artisan serve` | `go run main.go` | 启动开发服务器 |
+
+### 术语习惯
+- 使用 "函数" 而非 "方法"（除非特指 receiver method）
+- 使用 "包" 对应 PHP 的 "命名空间"
+- 使用 "结构体" 对应 PHP 的 "类"
+- 使用 "切片" 而非 "动态数组"
+
+### 示例风格
+- 提供代码示例时，同时给出 PHP 和 Go 的对比
+- 强调 Go 与 PHP 的差异点
+- 每学完一个概念必须有可运行的代码示例
+
+### 求职导向
+- 教学内容围绕招聘要求：Go + Gin + Gorm + PostgreSQL + Redis
+- 强调实际工作场景，而非纯理论
+- 代码要符合企业开发规范

@@ -1,0 +1,8 @@
+arr := [6]int{10,11,12,13,14,15}
+s := arr[2:4] // len=2, cap=4
+s = append(s, 99)     // 不超 cap，修改底层 arr[4]=99，arr 变了
+fmt.Println(arr)      // [10 11 12 13 99 15]
+
+s = append(s, 100, 101) // 一次加2个，所需cap=5（原cap=4），超了，扩容
+fmt.Println(arr)      // 还是 [10 11 12 13 99 15]，原数组未被改变
+fmt.Println(s)        // [12 13 99 100 101]
