@@ -211,13 +211,13 @@ func (h *OrderHandler) CreateOrder(c *gin.Context) {
 	}
 	
 	items := make([]struct {
-		ProductID uint
-		Quantity  int
+		ProductID uint `json:"product_id"`
+		Quantity  int  `json:"quantity"`
 	}, len(req.Items))
 	for i, item := range req.Items {
 		items[i] = struct {
-			ProductID uint
-			Quantity  int
+			ProductID uint `json:"product_id"`
+			Quantity  int  `json:"quantity"`
 		}{item.ProductID, item.Quantity}
 	}
 	
