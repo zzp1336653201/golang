@@ -8,27 +8,27 @@
 ## 搭建进度追踪
 
 ### Go 开发环境
-- [x] Go 语言安装
+- [x] Go 语言安装 (1.26.3)
 - [x] Go 环境变量配置 (GOROOT, GOPATH)
-- [x] Go Modules 配置
+- [x] Go Modules 配置 (goproxy.cn)
 - [ ] Gin 框架验证运行
 
 ### 数据库环境
-- [ ] PostgreSQL 安装
-- [ ] PostgreSQL 基础配置
+- [x] PostgreSQL 安装 (16.13)
+- [x] PostgreSQL 基础配置
 - [ ] 创建开发数据库
 - [ ] 配置远程访问（如需）
 
 ### 缓存环境
-- [ ] Redis 安装
-- [ ] Redis 基础配置
+- [x] Redis 安装 (7.0.15)
+- [x] Redis 基础配置
 - [ ] 配置持久化
 
 ### 部署工具
-- [ ] Git 配置
-- [ ] Docker 安装
-- [ ] Docker Compose 安装
-- [ ] Nginx 安装
+- [x] Git 配置 (已有)
+- [x] Docker 安装 (29.4.3)
+- [x] Docker Compose (随 Docker 一起安装)
+- [x] Nginx 安装 (1.24.0)
 
 ### 开发工具
 - [ ] 代码编辑器/IDE 配置
@@ -37,9 +37,9 @@
 
 ## 环境搭建记录
 
-### 2024-05-09 Go 环境安装
+### 2026-05-13 Go 环境安装（版本更新）
 
-**安装版本**: Go 1.22.0 linux/amd64
+**安装版本**: Go 1.26.3 linux/amd64
 
 **安装路径**: `/usr/local/go`
 
@@ -56,7 +56,7 @@ export PATH=$PATH:$GOPATH/bin
 | GOROOT | `/usr/local/go` | Go 安装目录 |
 | GOPATH | `/home/zzp/go` | 工作目录/依赖缓存 |
 | GOMODCACHE | `/home/zzp/go/pkg/mod` | 模块缓存路径 |
-| GOVERSION | `go1.22.0` | 版本号 |
+| GOVERSION | `go1.26.3` | 版本号 |
 | GOOS | `linux` | 目标系统 |
 | GOARCH | `amd64` | 目标架构 |
 
