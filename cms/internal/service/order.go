@@ -211,21 +211,3 @@ func (s *OrderService) GetUserOrders(ctx context.Context, userID uint, page, pag
 	
 	return orders, total, nil
 }
-
-// OrderStatusXXX 订单状态常量
-const (
-	OrderStatusPending   = 1 // 待支付
-	OrderStatusPaid      = 2 // 已支付
-	OrderStatusShipped   = 3 // 已发货
-	OrderStatusReceived  = 4 // 已收货
-	OrderStatusCompleted = 5 // 已完成
-	OrderStatusCanceled  = 6 // 已取消
-)
-
-// ReceiverInfo 收货信息
-type ReceiverInfo struct {
-	Name    string `json:"name" binding:"required"`
-	Phone   string `json:"phone" binding:"required"`
-	Address string `json:"address" binding:"required"`
-	Remark  string `json:"remark"`
-}

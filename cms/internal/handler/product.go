@@ -202,7 +202,7 @@ func (h *OrderHandler) CreateOrder(c *gin.Context) {
 			ProductID uint `json:"product_id" binding:"required"`
 			Quantity  int  `json:"quantity" binding:"required,gt=0"`
 		} `json:"items" binding:"required,min=1"`
-		Receiver service.ReceiverInfo `json:"receiver" binding:"required"`
+		Receiver model.ReceiverInfo `json:"receiver" binding:"required"`
 	}
 	
 	if err := c.ShouldBindJSON(&req); err != nil {

@@ -105,3 +105,23 @@ func (CartItem) TableName() string {
 func GenerateOrderNo() string {
 	return time.Now().Format("20060102150405") + uuid.New().String()[:8]
 }
+
+// ============ 订单状态常量 ============
+
+const (
+	OrderStatusPending   = 1 // 待支付
+	OrderStatusPaid      = 2 // 已支付
+	OrderStatusShipped   = 3 // 已发货
+	OrderStatusReceived  = 4 // 已收货
+	OrderStatusCompleted = 5 // 已完成
+	OrderStatusCanceled  = 6 // 已取消
+)
+
+// ============ 收货信息 ============
+
+type ReceiverInfo struct {
+	Name    string `json:"name" binding:"required"`
+	Phone   string `json:"phone" binding:"required"`
+	Address string `json:"address" binding:"required"`
+	Remark  string `json:"remark"`
+}
