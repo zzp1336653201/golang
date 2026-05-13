@@ -1,0 +1,28 @@
+server:
+  port: 8080
+  mode: debug  # debug / release
+
+database:
+  host: localhost
+  port: 3306
+  user: root
+  password: ""
+  dbname: cms
+  max_idle_conns: 10
+  max_open_conns: 100
+  conn_max_lifetime: 3600  # 秒
+
+redis:
+  host: localhost
+  port: 6379
+  password: ""
+  db: 0
+  pool_size: 100
+
+jwt:
+  secret: your-secret-key-change-in-production
+  expire_hours: 24
+
+rate_limit:
+  qps: 100
+  burst: 200

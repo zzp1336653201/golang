@@ -1,0 +1,29 @@
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Go
+vendor/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.sum
+
+# Dependencies
+.claude-source-leaked/
+.codebuddy/
+codex/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
